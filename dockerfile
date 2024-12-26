@@ -28,7 +28,7 @@ FROM openjdk:21-jdk-slim
 EXPOSE 8080
 
 # Copia o JAR gerado pelo Gradle para app.jar
-COPY --from=build /app/build/libs/ApiNews-0.0.1.jar
+COPY --from=build /libs/ApiNews-0.0.1.jar app.jar
 
 # Define o comando de entrada
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
